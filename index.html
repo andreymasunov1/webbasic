@@ -1,0 +1,317 @@
+<html>
+<head>
+<title>Page Title</title>
+</head>
+    <body>
+        <style>
+            
+            /* regular selector */
+            
+            body {
+                background-color: lightskyblue;
+            }
+            
+            h1, p {
+                color: darkblue;
+            }
+            
+            h4, li {
+                color: crimson;
+            }
+
+            /* this is class selector */
+            
+            .important {
+                border: 2px solid black;
+                margin: 40px;
+                margin-top: 50px;
+                padding: 40px;
+            }
+
+            img {
+                border: 3px solid darkgreen;
+                border-radius: 49%;
+            }
+
+            .sr-only {
+            position: absolute;
+            top: -30em;
+            }
+
+            table.sortable td,
+            table.sortable th {
+            padding: 0.125em 0.25em;
+            width: 8em;
+            }
+
+            table.sortable th {
+            font-weight: bold;
+            border-bottom: thin solid #888;
+            position: relative;
+            }
+
+            table.sortable th.no-sort {
+            padding-top: 0.35em;
+            }
+
+            table.sortable th:nth-child(5) {
+            width: 10em;
+            }
+
+            table.sortable th button {
+            position: absolute;
+            padding: 4px;
+            margin: 1px;
+            font-size: 100%;
+            font-weight: bold;
+            background: transparent;
+            border: none;
+            display: inline;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: left;
+            outline: none;
+            cursor: pointer;
+            }
+
+            table.sortable th button span {
+            position: absolute;
+            right: 4px;
+            }
+
+            table.sortable th[aria-sort="descending"] span::after {
+            content: "▼";
+            color: currentcolor;
+            font-size: 100%;
+            top: 0;
+            }
+
+            table.sortable th[aria-sort="ascending"] span::after {
+            content: "▲";
+            color: currentcolor;
+            font-size: 100%;
+            top: 0;
+            }
+
+            table.show-unsorted-icon th:not([aria-sort]) button span::after {
+            content: "♢";
+            color: currentcolor;
+            font-size: 100%;
+            position: relative;
+            top: -3px;
+            left: -4px;
+            }
+
+            table.sortable td.num {
+            text-align: right;
+            }
+
+            table.sortable tbody tr:nth-child(odd) {
+            background-color: #ddd;
+            }
+
+            /* Focus and hover styling */
+
+            table.sortable th button:focus,
+            table.sortable th button:hover {
+            padding: 2px;
+            border: 2px solid currentcolor;
+            background-color: #e5f4ff;
+            }
+
+            table.sortable th button:focus span,
+            table.sortable th button:hover span {
+            right: 2px;
+            }
+
+            table.sortable th:not([aria-sort]) button:focus span::after,
+            table.sortable th:not([aria-sort]) button:hover span::after {
+            content: "▼";
+            color: currentcolor;
+            font-size: 100%;
+            top: 0;
+            }
+
+
+        </style>
+    <h1>Header!!!</h1>
+    <!--this is comment-->
+    <p>This is the page of <b><i>J23-E84</i></b></p>
+    <h4>Trees</h4>
+    <ul>
+        <li>Spruce</li>
+        <li>Fir</li>
+        <li>Oak</li>
+        <li>Birch</li>
+    </ul>
+
+    <img src="http://127.0.0.1:5500/index.html" alt="Bla?">
+    <img src="https://futuretreehealth.com.au/wp-content/uploads/2022/11/English-Oak-1024x574.jpg" alt="Broken tree picture">
+
+    <hr title="Secret message">
+
+    <main class="important">
+        This is an important class before div
+        <div class="important">
+            This is nesting
+        </div>
+    </main>
+
+    <form action="https://ddh.gg" method="get" class="important">
+        <input name="q" placeholder="Input search string">
+        <button>Search</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+        
+    <p>This is for play and fun</p>
+
+    <table>
+        <tr>
+          <th>Company</th>
+          <th>Link</th>
+          <th>Number of clicks</th>
+        </tr>
+        <tr>
+          <td>Company-1</td>
+          <td>https://company1.com</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Company-2</td>
+          <td>https://company2.com</td>
+          <td>4</td>
+        </tr>
+        <tr>
+            <td>Company-3</td>
+            <td>https://company3.com</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Company-4</td>
+            <td>https://company4.com</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <div class="table-wrap">
+        <table class="sortable">
+          <caption>
+            Students currently enrolled in WAI-ARIA 101
+            <span class="sr-only">
+              , column headers with buttons are sortable.
+            </span>
+          </caption>
+          <thead>
+            <tr>
+              <th>
+                <button>
+                  First Name
+                  <span aria-hidden="true"></span>
+                </button>
+              </th>
+              <th aria-sort="ascending">
+                <button>
+                  Last Name
+                  <span aria-hidden="true"></span>
+                </button>
+              </th>
+              <th>
+                <button>
+                  Company
+                  <span aria-hidden="true"></span>
+                </button>
+              </th>
+              <th class="no-sort">
+                Address
+              </th>
+              <th class="num">
+                <button>
+                  Favorite Number
+                  <span aria-hidden="true"></span>
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Fred
+              </td>
+              <td>
+                Jackson
+              </td>
+              <td>
+                Canary, Inc.
+              </td>
+              <td>
+                123 Broad St.
+              </td>
+              <td class="num">
+                56
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sara
+              </td>
+              <td>
+                James
+              </td>
+              <td>
+                Cardinal, Inc.
+              </td>
+              <td>
+                457 First St.
+              </td>
+              <td class="num">
+                7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Ralph
+              </td>
+              <td>
+                Jefferson
+              </td>
+              <td>
+                Robin, Inc.
+              </td>
+              <td>
+                456 Main St.
+              </td>
+              <td class="num">
+                513
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nancy
+              </td>
+              <td>
+                Jensen
+              </td>
+              <td>
+                Eagle, Inc.
+              </td>
+              <td>
+                2203 Logan Dr.
+              </td>
+              <td class="num">
+                3.5
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    <p>That is all!</p>
+
+</body>
+</html>
