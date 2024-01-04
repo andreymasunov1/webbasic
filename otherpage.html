@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Other page</title>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                background-color: black;
+                font-family: sans-serif;
+                color: blueviolet;
+                font-size: 24px;
+                display: grid;
+                place-items: center;
+            }
+
+            div {
+                text-align: center;
+            }
+
+            #backend {
+                scale:  -1;
+            } 
+            
+            @keyframes rotation {
+                0% {rotate: 0deg;}
+                50% {rotate: 180deg;}
+                100% {rotate: 360deg;}
+            }
+
+            main {
+                animation: rotation 10s infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>Frontend</div>
+            <div>🎄</div>
+            <div>🚲</div>
+            <div id="backend">Backend</div>
+        </main>
+    </body>
+</html>
